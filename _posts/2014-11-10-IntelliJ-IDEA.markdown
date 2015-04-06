@@ -3,7 +3,7 @@ layout: post
 title:  "IntelliJ IDEA"
 date:   2014-11-10 22:05:40
 categories: tools
-tags: tools sublime-text-3
+tags: tools idea
 ---
 
 OSX Questions
