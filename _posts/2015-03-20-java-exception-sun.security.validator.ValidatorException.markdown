@@ -34,20 +34,24 @@ Solution 2
 
 Fake the trust manager
 
-	TrustManager[] trustAllCerts = new TrustManager[] { new X509TrustManager() {
-                public java.security.cert.X509Certificate[] getAcceptedIssuers() {
-                    return null;
-                }
-                
-                public void checkClientTrusted(X509Certificate[] certs,
-                                               String authType) {
-                }
-                
-                public void checkServerTrusted(X509Certificate[] certs,
-                                               String authType) {
-                }
-                
-            } };
+~~~
+TrustManager[] trustAllCerts = new TrustManager[] { new X509TrustManager() {
+    public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+            return null;
+        }
+        
+        public void checkClientTrusted(X509Certificate[] certs,
+                                       String authType) {
+        }
+        
+        public void checkServerTrusted(X509Certificate[] certs,
+                                       String authType) {
+        }
+        
+    } 
+};
 
-	context = SSLContext.getInstance("SSL");
-	context.init(keyManagerFactory.getKeyManagers(), trustAllCerts,new SecureRandom());
+context = SSLContext.getInstance("SSL");
+context.init(keyManagerFactory.getKeyManagers(), trustAllCerts,new SecureRandom());
+~~~
+{: .language-java}
