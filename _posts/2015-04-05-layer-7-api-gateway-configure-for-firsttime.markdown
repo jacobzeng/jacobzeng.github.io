@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "7Layer api gateway configure for first time"
+title:  "Layer 7 api gateway configure for first time"
 date:   2015-04-05 22:05:40
-categories: 7Layer
+categories: Layer7
+tags: Layer7
 ---
 >The guide is apply to gateway 8.2
 
