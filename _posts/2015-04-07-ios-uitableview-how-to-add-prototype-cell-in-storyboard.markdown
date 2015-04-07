@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "IOS UITableView: How to add prototype cell in storyboard"
+title:  "IOS: How to design prototype cell in storyboard"
 date:   2015-04-07 17:00:00
 categories: ios
 tags: ios uitableview
@@ -8,7 +8,7 @@ tags: ios uitableview
 
 >IOS SDK 8.2, Xcode Version 6.2
 
-Sometimes, you want to define the UI of prototype cell in storyboard, it's very straightforward.
+Sometimes, you want to design the UI of prototype cell in storyboard, it's very straightforward.
 
 Define the UI what you want
 -------

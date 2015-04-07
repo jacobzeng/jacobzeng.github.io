@@ -11,6 +11,17 @@ There are default margin in ViewController, sometimes it will make your UI broke
 
 ![5.png]({{site.url}}/assets/IOS Remove default margin in ViewController/5.png)
 
+Reason:
+------
+iOS8 SDK introduces a new concept: the “layout margins”. A new property has been added to the UIView class:
+
+~~~
+@property(nonatomic) UIEdgeInsets layoutMargins
+~~~
+
+These 4 values (the UIEdgeInsets fields) represent the margins of the view. Its subviews can now be positioned relative to these  margins.
+
+
 Solution:
 ------
 
