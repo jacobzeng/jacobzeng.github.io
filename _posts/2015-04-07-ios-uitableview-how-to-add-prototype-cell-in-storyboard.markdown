@@ -10,7 +10,7 @@ tags: ios uitableview
 
 Sometimes, you want to define the UI of prototype cell in storyboard, it's very straightforward.
 
-Define the ui what you want
+Define the UI what you want
 -------
 
 1. Select `Table View`, show `Attributes inspector`, find the `Prototype Cells`
@@ -24,4 +24,55 @@ Define the ui what you want
 
 4. Select `Table View Cell`, set attribute `Identifler`, will use it latter
 ![set identifler]({{site.url}}/assets/How to add prototype cell in storyboard/15.png)
+
+Create custom UITableViewCell for hosting the prototype cell
+------
+
+5. Create custmom UITableViewCell class, named `ContentTableViewCell` in this example
+![create ContentTableViewCell]({{site.url}}/assets/How to add prototype cell in storyboard/25.png)
+
+6. Select `Table View Cell`, show `Identity inspector`, binding attribute `Class` to new created class `ContentTableViewCell`
+![set attribute Class]({{site.url}}/assets/How to add prototype cell in storyboard/30.png)
+
+7. Show Assistant Editor
+![Show Assistant Editor]({{site.url}}/assets/How to add prototype cell in storyboard/35.png)
+
+8. Select `Content View`, then select `ContentTableViewCell.h` file in `Assistant Editor`
+![select ContentTableViewCell.h]({{site.url}}/assets/How to add prototype cell in storyboard/40.png)
+
+9. Outlet the UI elements in the cell
+![outlet ui elements in the cell]({{site.url}}/assets/How to add prototype cell in storyboard/45.png)
+
+Implements (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)
+------
+
+10. Define the key for identifler of `cellContent`
+![define key]({{site.url}}/assets/How to add prototype cell in storyboard/50.png)
+
+11. Import `ContentTableViewCell.h` and `PrefixHeader.pch` in ViewController
+![55]({{site.url}}/assets/How to add prototype cell in storyboard/55.png)
+
+12. Implement the `cellForRowIndexPath`
+
+~~~
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    ContentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellContent];
+    if(!cell){
+        cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([ContentTableViewCell class])];
+    }
+    
+    [self renderCellContent:cell forRowAtIndexPath:indexPath];
+    return cell;
+}
+
+- (void)renderCellContent:(ContentTableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSDictionary *data = contents[indexPath.section];
+    
+    cell.labelTime.text = [data objectForKey:@"time"];
+    cell.labelContent.text = [data objectForKey:@"content"];
+}
+~~~
+{: .language-objective-c}
 
