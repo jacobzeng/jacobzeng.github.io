@@ -2,8 +2,8 @@
 layout: post
 title:  "Ionic: emulate different iPhone devices"
 date:   2015-04-06 17:00:00
-categories: inoic
-tags: inoic
+categories: ionic
+tags: ionic
 ---
 
 >Sometimes, we want to emulate different iPhone devices to check the CSS, like iPhone5s, iPhone6 or other kinds
