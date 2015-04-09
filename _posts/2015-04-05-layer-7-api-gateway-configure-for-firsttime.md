@@ -3,7 +3,7 @@ layout: post
 title:  "Layer 7 api gateway configure for first time"
 date:   2015-04-05 22:05:40
 categories: Layer7
-tags: Layer7 security
+tags: layer7 security
 ---
 >The guide is apply to gateway 8.2
 

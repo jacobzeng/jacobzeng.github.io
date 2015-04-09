@@ -3,7 +3,7 @@ layout: post
 title:  "Layer 7: Using Route via HTTP(S) for call remote rest API"
 date:   2015-04-08 17:00:00
 categories: layer7
-tags: layer7 layer7-policy
+tags: layer7 layer7-policy security
 ---
 
 >Gateway 8.2, Mobile Access Gateway
@@ -52,3 +52,10 @@ Steps:
 4\. Using the response after parse
 
 ![20]({{site.baseUrl}}/assets/Using Route via HTTP for call rest API/20.png)
+
+
+Q: Certificate not verified when access REST api by HTTPS
+
+>com.l7tech.server.policy.assertion.ServerHttpRoutingAssertion: 4042: Problem routing to https://apiserver/service/auth.json. Error msg: Unable to obtain HTTP response from https://apiserver/service/auth.json: Certificate not verified. Caused by: Certificate path validation and/or revocation checking failed
+
+
