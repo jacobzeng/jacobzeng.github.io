@@ -60,4 +60,18 @@ Q: Certificate not verified when access REST api by HTTPS
 
 >com.l7tech.server.policy.assertion.ServerHttpRoutingAssertion: 4042: Problem routing to https://apiserver/service/auth.json. Error msg: Unable to obtain HTTP response from https://apiserver/service/auth.json: Certificate not verified. Caused by: Certificate path validation and/or revocation checking failed
 
+1. Open Tasks -> Manage certificate, click add
+![30]({{site.baseUrl}}/assets/Using Route via HTTP for call rest API/30.png)
+
+2. Type url of the rest API, next
+![35]({{site.baseUrl}}/assets/Using Route via HTTP for call rest API/35.png)
+
+3. Checked `Outbound SSL Connections`, next
+![40]({{site.baseUrl}}/assets/Using Route via HTTP for call rest API/40.png)
+
+4. Checked `Verify Hostnames for Outbound SSL connections`, Finish
+![45]({{site.baseUrl}}/assets/Using Route via HTTP for call rest API/45.png)
+
+5. Test it again
+
 
