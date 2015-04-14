@@ -8,7 +8,7 @@ tags: layer7 layer7-policy security
 
 >Gateway 8.2, Mobile Access Gateway
 
-Final Result:
+Final Result
 ===
 
 ![25]({{site.baseUrl}}/assets/Using Route via HTTP for call rest API/25.png)
@@ -20,7 +20,7 @@ Final Result:
 
 ---
 
-Steps:
+Steps
 ===
 
 1\. Drag assertion `set context variable` into your target policy, prepare the parameters what will pass into the remote REST api, it's json data in this example.
