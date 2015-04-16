@@ -2,7 +2,7 @@
 layout: post
 title:  "angularjs: service, factory and provider"
 date:   2015-04-16 22:05:40
-categories: tools
+categories: angularjs
 tags: angularjs javascript
 ---
 
