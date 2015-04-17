@@ -6,6 +6,8 @@ categories: ionic
 tags: ionic ngCordova cordova
 ---
 
+>Version: ionic-bower#1.0.0-rc.1
+
 Install ngCordova and cordova geolocation plugin
 ---
 
@@ -15,7 +17,7 @@ Step1: run following command at root level of project for install `ngCordova` li
 bower install ngCordova
 {% endhighlight %}
 
-Step 2: Import the `ngCordova` to your index.html
+Step 2: Import the `ngCordova` to your project, default is index.html
 
 {% highlight html%}
 <script src="lib/ngCordova/dist/ng-cordova.js"></script>
